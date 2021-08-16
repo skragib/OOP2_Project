@@ -51,5 +51,20 @@ namespace HomePage
                 ow.Show();
             }
         }
+        OwnerRequestFund orf = new OwnerRequestFund();
+        int orff = 0;
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (orff == 0)
+            {
+                this.Controls.Add(orf);
+                orf.BringToFront();
+                orff = 1;
+            }
+            else
+            {
+                orf.Show();
+            }
+        }
     }
 }

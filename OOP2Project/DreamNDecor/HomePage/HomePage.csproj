@@ -77,6 +77,12 @@
     <Compile Include="DecoratorSignUp.Designer.cs">
       <DependentUpon>DecoratorSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="DecoRefundPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DecoRefundPanel.Designer.cs">
+      <DependentUpon>DecoRefundPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForDecoWantedPost.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,11 +137,29 @@
     <Compile Include="OAcceptReject.Designer.cs">
       <DependentUpon>OAcceptReject.cs</DependentUpon>
     </Compile>
+    <Compile Include="OwnerInterestedWantedPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OwnerInterestedWantedPost.Designer.cs">
+      <DependentUpon>OwnerInterestedWantedPost.cs</DependentUpon>
+    </Compile>
     <Compile Include="OwnerProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="OwnerProfile.Designer.cs">
       <DependentUpon>OwnerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerRequestFund.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OwnerRequestFund.Designer.cs">
+      <DependentUpon>OwnerRequestFund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerRequestFundStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OwnerRequestFundStatus.Designer.cs">
+      <DependentUpon>OwnerRequestFundStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="OwnerSignUp.cs">
       <SubType>UserControl</SubType>
@@ -190,6 +214,9 @@
     <EmbeddedResource Include="DecoratorSignUp.resx">
       <DependentUpon>DecoratorSignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DecoRefundPanel.resx">
+      <DependentUpon>DecoRefundPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForDecoWantedPost.resx">
       <DependentUpon>ForDecoWantedPost.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,8 +244,17 @@
     <EmbeddedResource Include="OAcceptReject.resx">
       <DependentUpon>OAcceptReject.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OwnerInterestedWantedPost.resx">
+      <DependentUpon>OwnerInterestedWantedPost.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OwnerProfile.resx">
       <DependentUpon>OwnerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerRequestFund.resx">
+      <DependentUpon>OwnerRequestFund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerRequestFundStatus.resx">
+      <DependentUpon>OwnerRequestFundStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OwnerSignUp.resx">
       <DependentUpon>OwnerSignUp.cs</DependentUpon>

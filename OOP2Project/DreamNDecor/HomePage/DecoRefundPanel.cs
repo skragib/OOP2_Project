@@ -13,18 +13,24 @@ using System.IO;
 
 namespace HomePage
 {
-    public partial class ViewOrders : UserControl
+    public partial class DecoRefundPanel : UserControl
     {
-        public ViewOrders()
+        public DecoRefundPanel()
         {
             InitializeComponent();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
             SqlConnection con = new SqlConnection(cs);
-            string query = "select * from Orderlist where postedby='"+Session.sName+"'";
+            string query = "select * from RefundReq where RequestTo='" + Session.sName + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataTable data = new DataTable();
             sda.Fill(data);
@@ -50,42 +56,45 @@ namespace HomePage
             textBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            textBox5.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
             richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            richTextBox2.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
             textBox4.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             pictureBox1.Image = GetPhoto((byte[])dataGridView1.SelectedRows[0].Cells[5].Value);
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
             SqlConnection conn = new SqlConnection(cs);
-            string query = "INSERT INTO AcceptedOrder VALUES (@Oname,@name,@price,@type,@desc,@img,@postuname)";
+            string query = "INSERT INTO RefundReqAccepted VALUES (@rf,@name,@price,@type,@desc,@img,@rt,@rsn)";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@name", textBox1.Text);
             cmd.Parameters.AddWithValue("@price", textBox2.Text);
             cmd.Parameters.AddWithValue("@type", textBox3.Text);
             cmd.Parameters.AddWithValue("@desc", richTextBox1.Text);
             cmd.Parameters.AddWithValue("@img", new ImageConverter().ConvertTo(pictureBox1.Image, typeof(byte[])));
-            cmd.Parameters.AddWithValue("@Oname", textBox4.Text);
-            cmd.Parameters.AddWithValue("@postuname", Session.sName);
+            cmd.Parameters.AddWithValue("@rf", textBox4.Text);
+            cmd.Parameters.AddWithValue("@rt", Session.sName);
+            cmd.Parameters.AddWithValue("@rsn", richTextBox2.Text);
             conn.Open();
             int r = cmd.ExecuteNonQuery();
             if (r == 1)
             {
-                MessageBox.Show("Order accepted!");
+                MessageBox.Show("Refund accepted!");
                 string css = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
                 SqlConnection connn = new SqlConnection(css);
-                string queryyy = "delete from Orderlist where postedby=@uuname and name=@nname";
+                string queryyy = "delete from RefundReq where id=@id";
                 SqlCommand cmdd = new SqlCommand(queryyy, connn);
-                cmdd.Parameters.AddWithValue("@nname", textBox1.Text);
-                cmdd.Parameters.AddWithValue("@uuname", Session.sName);
+                cmdd.Parameters.AddWithValue("@id", textBox5.Text);
                 connn.Open();
                 int a = cmdd.ExecuteNonQuery();
                 if (a == 1)
                 {
                     string csss = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
                     SqlConnection con = new SqlConnection(csss);
-                    string quer = "select * from Orderlist where postedby='" + Session.sName + "'";
+                    string quer = "select * from RefundReq where RequestTo='" + Session.sName + "'";
                     SqlDataAdapter sda = new SqlDataAdapter(quer, con);
                     DataTable data = new DataTable();
                     sda.Fill(data);
@@ -109,33 +118,33 @@ namespace HomePage
         {
             string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
             SqlConnection conn = new SqlConnection(cs);
-            string query = "INSERT INTO RejectedOrder VALUES (@Oname,@name,@price,@type,@desc,@img,@postuname)";
+            string query = "INSERT INTO RefundReqRejected VALUES (@rf,@name,@price,@type,@desc,@img,@rt,@rsn)";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@name", textBox1.Text);
             cmd.Parameters.AddWithValue("@price", textBox2.Text);
             cmd.Parameters.AddWithValue("@type", textBox3.Text);
             cmd.Parameters.AddWithValue("@desc", richTextBox1.Text);
             cmd.Parameters.AddWithValue("@img", new ImageConverter().ConvertTo(pictureBox1.Image, typeof(byte[])));
-            cmd.Parameters.AddWithValue("@Oname", textBox4.Text);
-            cmd.Parameters.AddWithValue("@postuname", Session.sName);
+            cmd.Parameters.AddWithValue("@rf", textBox4.Text);
+            cmd.Parameters.AddWithValue("@rt", Session.sName);
+            cmd.Parameters.AddWithValue("@rsn", richTextBox2.Text);
             conn.Open();
             int r = cmd.ExecuteNonQuery();
             if (r == 1)
             {
-                MessageBox.Show("Order Rejected!");
+                MessageBox.Show("Refund rejected!");
                 string css = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
                 SqlConnection connn = new SqlConnection(css);
-                string queryyy = "delete from Orderlist where postedby=@uuname and name=@nname";
+                string queryyy = "delete from RefundReq where id=@id";
                 SqlCommand cmdd = new SqlCommand(queryyy, connn);
-                cmdd.Parameters.AddWithValue("@nname", textBox1.Text);
-                cmdd.Parameters.AddWithValue("@uuname", Session.sName);
+                cmdd.Parameters.AddWithValue("@id", textBox5.Text);
                 connn.Open();
                 int a = cmdd.ExecuteNonQuery();
                 if (a == 1)
                 {
                     string csss = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
                     SqlConnection con = new SqlConnection(csss);
-                    string quer = "select * from Orderlist where postedby='" + Session.sName + "'";
+                    string quer = "select * from RefundReq where RequestTo='" + Session.sName + "'";
                     SqlDataAdapter sda = new SqlDataAdapter(quer, con);
                     DataTable data = new DataTable();
                     sda.Fill(data);
@@ -153,11 +162,6 @@ namespace HomePage
 
                 }
             }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }

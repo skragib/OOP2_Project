@@ -210,5 +210,20 @@ namespace HomePage
             richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             pictureBox1.Image = GetPhoto((byte[])dataGridView1.SelectedRows[0].Cells[4].Value);
         }
+        OwnerInterestedWantedPost oiw = new OwnerInterestedWantedPost();
+        int oiwf = 0;
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (oiwf == 0)
+            {
+                this.Controls.Add(oiw);
+                oiw.BringToFront();
+                oiwf = 1;
+            }
+            else
+            {
+                oiw.Show();
+            }
+        }
     }
 }

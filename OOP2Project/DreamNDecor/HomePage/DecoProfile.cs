@@ -77,5 +77,20 @@ namespace HomePage
                 dwp.Show();
             }
         }
+        DecoRefundPanel drp = new DecoRefundPanel();
+        int drpf = 0;
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (drpf == 0)
+            {
+                this.Controls.Add(drp);
+                drp.BringToFront();
+                drpf = 1;
+            }
+            else
+            {
+                drp.Show();
+            }
+        }
     }
 }
