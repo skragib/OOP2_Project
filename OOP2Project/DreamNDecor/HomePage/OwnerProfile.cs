@@ -66,5 +66,20 @@ namespace HomePage
                 orf.Show();
             }
         }
+        OwnerUpdate ou = new OwnerUpdate();
+        int ouf = 0;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (ouf == 0)
+            {
+                this.Controls.Add(ou);
+                ou.BringToFront();
+                ouf = 1;
+            }
+            else
+            {
+                ou.Show();
+            }
+        }
     }
 }

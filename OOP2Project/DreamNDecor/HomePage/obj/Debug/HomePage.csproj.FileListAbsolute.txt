@@ -32,3 +32,7 @@ C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomeP
 C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.DecoRefundPanel.resources
 C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.OwnerRequestFund.resources
 C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.OwnerRequestFundStatus.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.OwnerUpdate.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.Form4.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.AdminProfile.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.AdminAddPanel.resources

@@ -113,6 +113,29 @@ namespace HomePage
                     }
                     conn.Close();
                 }
+                else if (ucheck[0] == 'A')
+                {
+                    SqlConnection conn = new SqlConnection(cs);
+                    string query = "select * from A_LOGIN where UserName = @user and Password = @pass";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@user", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@pass", textBox2.Text);
+                    conn.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows == true)
+                    {
+                        MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Session.sName = textBox1.Text;
+                        ((Form1)this.TopLevelControl).Hide();
+                        Form4 f4 = new Form4();
+                        f4.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login failed!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    conn.Close();
+                }
 
             }
             else

@@ -1,7 +1,7 @@
 ﻿
 namespace HomePage
 {
-    partial class Form3
+    partial class Form4
     {
         /// <summary>
         /// Required designer variable.
@@ -29,23 +29,22 @@ namespace HomePage
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SidePanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.SidePanel = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.homeDefault1 = new HomePage.HomeDefault();
-            this.typeSelection1 = new HomePage.TypeSelection();
+            this.adminProfile1 = new HomePage.AdminProfile();
             this.aboutUs1 = new HomePage.AboutUs();
-            this.ownerProfile1 = new HomePage.OwnerProfile();
+            this.homeDefault1 = new HomePage.HomeDefault();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,8 +62,73 @@ namespace HomePage
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 626);
-            this.panel1.TabIndex = 3;
+            this.panel1.Size = new System.Drawing.Size(209, 627);
+            this.panel1.TabIndex = 4;
+            // 
+            // SidePanel
+            // 
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.SidePanel.Location = new System.Drawing.Point(0, 240);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(13, 54);
+            this.SidePanel.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(209, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(955, 87);
+            this.panel2.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(757, 30);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(133, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(78, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 30);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Dream and Design";
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(891, 21);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(40, 34);
+            this.button3.TabIndex = 5;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // button12
             // 
@@ -95,14 +159,6 @@ namespace HomePage
             this.button14.TabIndex = 5;
             this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button14.UseVisualStyleBackColor = true;
-            // 
-            // SidePanel
-            // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.SidePanel.Location = new System.Drawing.Point(0, 240);
-            this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(13, 54);
-            this.SidePanel.TabIndex = 4;
             // 
             // button4
             // 
@@ -155,105 +211,40 @@ namespace HomePage
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel2
+            // adminProfile1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(209, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(959, 87);
-            this.panel2.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(757, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(891, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 34);
-            this.button3.TabIndex = 5;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(78, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Dream and Design";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // homeDefault1
-            // 
-            this.homeDefault1.Location = new System.Drawing.Point(231, 114);
-            this.homeDefault1.Name = "homeDefault1";
-            this.homeDefault1.Size = new System.Drawing.Size(925, 481);
-            this.homeDefault1.TabIndex = 5;
-            // 
-            // typeSelection1
-            // 
-            this.typeSelection1.Location = new System.Drawing.Point(231, 114);
-            this.typeSelection1.Name = "typeSelection1";
-            this.typeSelection1.Size = new System.Drawing.Size(925, 477);
-            this.typeSelection1.TabIndex = 6;
+            this.adminProfile1.Location = new System.Drawing.Point(227, 118);
+            this.adminProfile1.Name = "adminProfile1";
+            this.adminProfile1.Size = new System.Drawing.Size(925, 481);
+            this.adminProfile1.TabIndex = 8;
             // 
             // aboutUs1
             // 
-            this.aboutUs1.Location = new System.Drawing.Point(231, 114);
+            this.aboutUs1.Location = new System.Drawing.Point(232, 118);
             this.aboutUs1.Name = "aboutUs1";
             this.aboutUs1.Size = new System.Drawing.Size(920, 475);
             this.aboutUs1.TabIndex = 7;
             // 
-            // ownerProfile1
+            // homeDefault1
             // 
-            this.ownerProfile1.Location = new System.Drawing.Point(223, 119);
-            this.ownerProfile1.Name = "ownerProfile1";
-            this.ownerProfile1.Size = new System.Drawing.Size(933, 472);
-            this.ownerProfile1.TabIndex = 8;
+            this.homeDefault1.Location = new System.Drawing.Point(227, 118);
+            this.homeDefault1.Name = "homeDefault1";
+            this.homeDefault1.Size = new System.Drawing.Size(925, 481);
+            this.homeDefault1.TabIndex = 6;
             // 
-            // Form3
+            // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 626);
-            this.Controls.Add(this.ownerProfile1);
+            this.ClientSize = new System.Drawing.Size(1164, 627);
+            this.Controls.Add(this.adminProfile1);
             this.Controls.Add(this.aboutUs1);
-            this.Controls.Add(this.typeSelection1);
             this.Controls.Add(this.homeDefault1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form3";
+            this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Form4";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -277,8 +268,7 @@ namespace HomePage
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private HomeDefault homeDefault1;
-        private TypeSelection typeSelection1;
         private AboutUs aboutUs1;
-        private OwnerProfile ownerProfile1;
+        private AdminProfile adminProfile1;
     }
 }
