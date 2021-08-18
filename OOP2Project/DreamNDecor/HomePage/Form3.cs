@@ -40,5 +40,14 @@ namespace HomePage
             SidePanel.Top = button4.Top;
             ownerProfile1.BringToFront();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Session.sName = "zzz";
+            this.Hide();
+            ((Form3)this.TopLevelControl).Hide();
+            Form1 f6 = new Form1();
+            f6.Show();
+        }
     }
 }

@@ -41,5 +41,14 @@ namespace HomePage
             SidePanel.Top = button4.Top;
             adminProfile1.BringToFront();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Session.sName = "zzz";
+            this.Hide();
+            ((Form4)this.TopLevelControl).Hide();
+            Form1 f5 = new Form1();
+            f5.Show();
+        }
     }
 }

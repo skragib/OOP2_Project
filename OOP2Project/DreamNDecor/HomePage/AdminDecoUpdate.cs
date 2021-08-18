@@ -10,27 +10,56 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace HomePage
 {
-    public partial class DecoratorSignUp : UserControl
+    public partial class AdminDecoUpdate : UserControl
     {
-        public DecoratorSignUp()
+        public AdminDecoUpdate()
         {
             InitializeComponent();
         }
 
+        private Image GetPhoto(byte[] photo)
+        {
+            MemoryStream ms = new MemoryStream(photo);
+            return Image.FromStream(ms);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select * from D_LOGIN";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable data = new DataTable();
+            sda.Fill(data);
+            dataGridView1.DataSource = data;
+
+            ///Image Column
+            DataGridViewImageColumn dgv = new DataGridViewImageColumn();
+            dgv = (DataGridViewImageColumn)dataGridView1.Columns[7];
+            dgv.ImageLayout = DataGridViewImageCellLayout.Stretch;
+
+            //AUTOSIZE
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //Image Height
+            dataGridView1.RowTemplate.Height = 50;
+            //
+            
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
-        
+
 
         public object ErrorProvider1 { get; private set; }
 
 
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -38,7 +67,7 @@ namespace HomePage
 
             string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
             SqlConnection conn = new SqlConnection(cs);
-            string query = "INSERT INTO D_LOGIN VALUES (@name,@email,@pass,@phone,@gender,@dob,@exp,@img,@C_name,@Address)";
+            string query = "update D_LOGIN set Email=@email,Password=@pass,Phone_number=@phone,Gender=@gender,Dob=@dob,Experience=@exp,Image=@img,C_name=@C_name,Address=@Address where Name=@name";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -56,11 +85,7 @@ namespace HomePage
             int r = cmd.ExecuteNonQuery();
             if (r == 1)
             {
-                MessageBox.Show("Registered");
-                Session.sName = textBox6.Text;
-                ((Form1)this.TopLevelControl).Hide();
-                Form2 f2 = new Form2();
-                f2.Show();
+                MessageBox.Show("Updated");
             }
 
         }
@@ -79,28 +104,10 @@ namespace HomePage
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = new Bitmap(ofd.FileName);
-
-                //// Update Image
-                //SqlConnection conn = new SqlConnection(cs);
-                //string query = "UPDATE USERS SET IMAGE = @IMG WHERE ID = @ID";
-
-                //SqlCommand cmd = new SqlCommand(query, conn);
-
-                /* cmd.Parameters.AddWithValue("@ID", sessionID);
-                 cmd.Parameters.AddWithValue("@IMG", new ImageConverter().ConvertTo(pictureBox1.Image, typeof(byte[])));*/
-                /*
-                                conn.Open();
-
-                                int result = cmd.ExecuteNonQuery();
-
-                                MessageBox.Show(result.ToString());
-
-                                conn.Close();
-                */
             }
         }
 
-        
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -119,7 +126,7 @@ namespace HomePage
             }
         }
 
-        
+
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
@@ -226,7 +233,7 @@ namespace HomePage
             }
         }
 
-        
+
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
@@ -252,7 +259,9 @@ namespace HomePage
 
         private static Regex email_validation()
         {
-            string pattern = @"[a-z0-9][.-_][a-z0-9]+[@][a-z]+[.][a-z]{2,3}";
+            string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
+                + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
+                + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
 
             return new Regex(pattern, RegexOptions.IgnoreCase);
         }
@@ -292,6 +301,7 @@ namespace HomePage
                 errorProvider5.Clear();
             }
         }
+
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             Session.sGender = "male";
@@ -300,7 +310,28 @@ namespace HomePage
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             Session.sGender = "female";
+        }
 
+        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            textBox5.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            textBox4.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            textBox3.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            string gender = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            if (gender == "male")
+            {
+                radioButton2.Checked = true;
+            }
+            else
+            {
+                radioButton3.Checked = true;
+            }
+            dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[5].Value.ToString());
+            numericUpDown1.Value = Convert.ToDecimal(dataGridView1.SelectedRows[0].Cells[6].Value.ToString());
+            textBox6.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+            richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
+            pictureBox1.Image = GetPhoto((byte[])dataGridView1.SelectedRows[0].Cells[7].Value);
         }
     }
 }

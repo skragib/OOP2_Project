@@ -36,5 +36,36 @@ namespace HomePage
         {
             this.Hide();
         }
+
+        AdminOwnerUpdate aou = new AdminOwnerUpdate();
+        int aouf = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (aouf == 0)
+            {
+                this.Controls.Add(aou);
+                aou.BringToFront();
+                aouf = 1;
+            }
+            else
+            {
+                aou.Show();
+            }
+        }
+        AdminDecoUpdate adu = new AdminDecoUpdate();
+        int aduf = 0;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (aduf == 0)
+            {
+                this.Controls.Add(adu);
+                adu.BringToFront();
+                aduf = 1;
+            }
+            else
+            {
+                adu.Show();
+            }
+        }
     }
 }

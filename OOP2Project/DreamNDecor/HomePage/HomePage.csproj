@@ -59,6 +59,18 @@
     <Compile Include="AdminAddPanel.Designer.cs">
       <DependentUpon>AdminAddPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminDecoUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDecoUpdate.Designer.cs">
+      <DependentUpon>AdminDecoUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminOwnerUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminOwnerUpdate.Designer.cs">
+      <DependentUpon>AdminOwnerUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminAddPanel.resx">
       <DependentUpon>AdminAddPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDecoUpdate.resx">
+      <DependentUpon>AdminDecoUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminOwnerUpdate.resx">
+      <DependentUpon>AdminOwnerUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminProfile.resx">
       <DependentUpon>AdminProfile.cs</DependentUpon>
