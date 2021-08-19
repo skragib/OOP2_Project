@@ -80,23 +80,6 @@ namespace HomePage
             {
                 pictureBox1.Image = new Bitmap(ofd.FileName);
 
-                //// Update Image
-                //SqlConnection conn = new SqlConnection(cs);
-                //string query = "UPDATE USERS SET IMAGE = @IMG WHERE ID = @ID";
-
-                //SqlCommand cmd = new SqlCommand(query, conn);
-
-                /* cmd.Parameters.AddWithValue("@ID", sessionID);
-                 cmd.Parameters.AddWithValue("@IMG", new ImageConverter().ConvertTo(pictureBox1.Image, typeof(byte[])));*/
-                /*
-                                conn.Open();
-
-                                int result = cmd.ExecuteNonQuery();
-
-                                MessageBox.Show(result.ToString());
-
-                                conn.Close();
-                */
             }
         }
 

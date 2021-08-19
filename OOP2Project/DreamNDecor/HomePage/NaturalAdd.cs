@@ -65,6 +65,7 @@ namespace HomePage
         {
             if (Session.sName[0] != 'O')
             {
+                MessageBox.Show("You must be logged in as House Owner to order!");
 
             }
             else
