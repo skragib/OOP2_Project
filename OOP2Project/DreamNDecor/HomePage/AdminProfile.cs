@@ -32,10 +32,6 @@ namespace HomePage
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
 
         AdminOwnerUpdate aou = new AdminOwnerUpdate();
         int aouf = 0;
@@ -67,5 +63,6 @@ namespace HomePage
                 adu.Show();
             }
         }
+        
     }
 }

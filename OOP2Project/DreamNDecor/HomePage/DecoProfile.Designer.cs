@@ -44,11 +44,15 @@ namespace HomePage
             this.panel5 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,7 +60,7 @@ namespace HomePage
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(106, 75);
+            this.panel1.Location = new System.Drawing.Point(106, 18);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(197, 109);
             this.panel1.TabIndex = 4;
@@ -91,7 +95,7 @@ namespace HomePage
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(368, 75);
+            this.panel2.Location = new System.Drawing.Point(368, 18);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(197, 109);
             this.panel2.TabIndex = 5;
@@ -126,7 +130,7 @@ namespace HomePage
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(626, 75);
+            this.panel3.Location = new System.Drawing.Point(626, 18);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(197, 109);
             this.panel3.TabIndex = 6;
@@ -161,7 +165,7 @@ namespace HomePage
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(210, 269);
+            this.panel4.Location = new System.Drawing.Point(210, 166);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(234, 109);
             this.panel4.TabIndex = 7;
@@ -196,7 +200,7 @@ namespace HomePage
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel5.Controls.Add(this.button5);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(509, 269);
+            this.panel5.Location = new System.Drawing.Point(509, 166);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(197, 109);
             this.panel5.TabIndex = 10;
@@ -226,10 +230,46 @@ namespace HomePage
             this.label5.TabIndex = 1;
             this.label5.Text = "Refund Requests";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Location = new System.Drawing.Point(368, 314);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(197, 109);
+            this.panel6.TabIndex = 6;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(45, 55);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(107, 26);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "View All";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(13, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(169, 25);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "View Massages";
+            // 
             // DecoProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -247,6 +287,8 @@ namespace HomePage
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -267,5 +309,8 @@ namespace HomePage
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label6;
     }
 }

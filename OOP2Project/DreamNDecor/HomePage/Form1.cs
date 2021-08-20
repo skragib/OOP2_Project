@@ -41,10 +41,23 @@ namespace HomePage
             SidePanel.Top = button4.Top;
             login1.BringToFront();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Session.search = textBox1.Text;
+            searchPanel1.BringToFront();
+        }
+        private void button14_Click(object sender, EventArgs e)
+        {
+            //feedback1.BringToFront();
+            MessageBox.Show("Need to login first to provide feedback!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
     static class Session
     {
         public static string sName = "zzz";
         public static string sGender;
+        public static string s_rName;
+        public static string search;
     }
 }

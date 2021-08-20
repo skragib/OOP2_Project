@@ -31,7 +31,7 @@ namespace HomePage
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@ namespace HomePage
             this.typeSelection1 = new HomePage.TypeSelection();
             this.aboutUs1 = new HomePage.AboutUs();
             this.ownerProfile1 = new HomePage.OwnerProfile();
-            this.button5 = new System.Windows.Forms.Button();
+            this.feedback1 = new HomePage.Feedback();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,7 +56,6 @@ namespace HomePage
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.button4);
@@ -68,20 +67,21 @@ namespace HomePage
             this.panel1.Size = new System.Drawing.Size(209, 626);
             this.panel1.TabIndex = 3;
             // 
-            // button12
+            // button5
             // 
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(51, 579);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(32, 35);
-            this.button12.TabIndex = 6;
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button12.UseVisualStyleBackColor = true;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(42, 580);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(32, 35);
+            this.button5.TabIndex = 9;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button14
             // 
@@ -97,6 +97,7 @@ namespace HomePage
             this.button14.TabIndex = 5;
             this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // SidePanel
             // 
@@ -230,6 +231,7 @@ namespace HomePage
             // 
             // aboutUs1
             // 
+            this.aboutUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.aboutUs1.Location = new System.Drawing.Point(231, 114);
             this.aboutUs1.Name = "aboutUs1";
             this.aboutUs1.Size = new System.Drawing.Size(920, 475);
@@ -237,32 +239,24 @@ namespace HomePage
             // 
             // ownerProfile1
             // 
-            this.ownerProfile1.Location = new System.Drawing.Point(223, 119);
+            this.ownerProfile1.Location = new System.Drawing.Point(223, 114);
             this.ownerProfile1.Name = "ownerProfile1";
-            this.ownerProfile1.Size = new System.Drawing.Size(933, 472);
+            this.ownerProfile1.Size = new System.Drawing.Size(933, 477);
             this.ownerProfile1.TabIndex = 8;
             // 
-            // button5
+            // feedback1
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(89, 579);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(32, 35);
-            this.button5.TabIndex = 9;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.feedback1.Location = new System.Drawing.Point(226, 114);
+            this.feedback1.Name = "feedback1";
+            this.feedback1.Size = new System.Drawing.Size(925, 481);
+            this.feedback1.TabIndex = 9;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 626);
+            this.Controls.Add(this.feedback1);
             this.Controls.Add(this.ownerProfile1);
             this.Controls.Add(this.aboutUs1);
             this.Controls.Add(this.typeSelection1);
@@ -283,7 +277,6 @@ namespace HomePage
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button button4;
@@ -299,5 +292,6 @@ namespace HomePage
         private AboutUs aboutUs1;
         private OwnerProfile ownerProfile1;
         private System.Windows.Forms.Button button5;
+        private Feedback feedback1;
     }
 }

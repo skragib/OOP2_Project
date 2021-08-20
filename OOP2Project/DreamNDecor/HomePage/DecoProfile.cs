@@ -92,5 +92,20 @@ namespace HomePage
                 drp.Show();
             }
         }
+        MainConvoPanel mcp = new MainConvoPanel();
+        int mcpf = 0;
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (mcpf == 0)
+            {
+                this.Controls.Add(mcp);
+                mcp.BringToFront();
+                mcpf = 1;
+            }
+            else
+            {
+                mcp.Show();
+            }
+        }
     }
 }

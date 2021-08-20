@@ -31,7 +31,6 @@ namespace HomePage
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -42,12 +41,14 @@ namespace HomePage
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchPanel1 = new HomePage.SearchPanel();
             this.decoratorSignUp1 = new HomePage.DecoratorSignUp();
             this.signUpCatagory1 = new HomePage.SignUpCatagory();
             this.login1 = new HomePage.Login();
             this.aboutUs1 = new HomePage.AboutUs();
             this.typeSelection1 = new HomePage.TypeSelection();
             this.homeDefault1 = new HomePage.HomeDefault();
+            this.feedback1 = new HomePage.Feedback();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,7 +57,6 @@ namespace HomePage
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.button4);
@@ -67,21 +67,6 @@ namespace HomePage
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 627);
             this.panel1.TabIndex = 3;
-            // 
-            // button12
-            // 
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(51, 579);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(32, 35);
-            this.button12.TabIndex = 6;
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button12.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
@@ -97,6 +82,7 @@ namespace HomePage
             this.button14.TabIndex = 5;
             this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // SidePanel
             // 
@@ -192,6 +178,7 @@ namespace HomePage
             this.button3.TabIndex = 5;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -214,53 +201,70 @@ namespace HomePage
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // searchPanel1
+            // 
+            this.searchPanel1.Location = new System.Drawing.Point(227, 106);
+            this.searchPanel1.Name = "searchPanel1";
+            this.searchPanel1.Size = new System.Drawing.Size(920, 474);
+            this.searchPanel1.TabIndex = 11;
+            // 
             // decoratorSignUp1
             // 
-            this.decoratorSignUp1.Location = new System.Drawing.Point(220, 105);
+            this.decoratorSignUp1.Location = new System.Drawing.Point(223, 106);
             this.decoratorSignUp1.Name = "decoratorSignUp1";
             this.decoratorSignUp1.Size = new System.Drawing.Size(932, 472);
             this.decoratorSignUp1.TabIndex = 10;
             // 
             // signUpCatagory1
             // 
-            this.signUpCatagory1.Location = new System.Drawing.Point(228, 116);
+            this.signUpCatagory1.Location = new System.Drawing.Point(240, 106);
             this.signUpCatagory1.Name = "signUpCatagory1";
             this.signUpCatagory1.Size = new System.Drawing.Size(924, 474);
             this.signUpCatagory1.TabIndex = 9;
             // 
             // login1
             // 
-            this.login1.Location = new System.Drawing.Point(229, 116);
+            this.login1.Location = new System.Drawing.Point(230, 106);
             this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(923, 478);
+            this.login1.Size = new System.Drawing.Size(925, 479);
             this.login1.TabIndex = 8;
             // 
             // aboutUs1
             // 
-            this.aboutUs1.Location = new System.Drawing.Point(220, 105);
+            this.aboutUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.aboutUs1.Location = new System.Drawing.Point(232, 110);
             this.aboutUs1.Name = "aboutUs1";
             this.aboutUs1.Size = new System.Drawing.Size(920, 475);
             this.aboutUs1.TabIndex = 7;
             // 
             // typeSelection1
             // 
-            this.typeSelection1.Location = new System.Drawing.Point(227, 116);
+            this.typeSelection1.Location = new System.Drawing.Point(230, 120);
             this.typeSelection1.Name = "typeSelection1";
             this.typeSelection1.Size = new System.Drawing.Size(925, 477);
             this.typeSelection1.TabIndex = 6;
             // 
             // homeDefault1
             // 
-            this.homeDefault1.Location = new System.Drawing.Point(227, 116);
+            this.homeDefault1.Location = new System.Drawing.Point(227, 106);
             this.homeDefault1.Name = "homeDefault1";
-            this.homeDefault1.Size = new System.Drawing.Size(925, 481);
+            this.homeDefault1.Size = new System.Drawing.Size(925, 491);
             this.homeDefault1.TabIndex = 5;
+            // 
+            // feedback1
+            // 
+            this.feedback1.Location = new System.Drawing.Point(230, 110);
+            this.feedback1.Name = "feedback1";
+            this.feedback1.Size = new System.Drawing.Size(925, 481);
+            this.feedback1.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 627);
+            this.Controls.Add(this.feedback1);
+            this.Controls.Add(this.searchPanel1);
             this.Controls.Add(this.decoratorSignUp1);
             this.Controls.Add(this.signUpCatagory1);
             this.Controls.Add(this.login1);
@@ -283,7 +287,6 @@ namespace HomePage
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button button4;
@@ -300,5 +303,7 @@ namespace HomePage
         private Login login1;
         private SignUpCatagory signUpCatagory1;
         private DecoratorSignUp decoratorSignUp1;
+        private SearchPanel searchPanel1;
+        private Feedback feedback1;
     }
 }

@@ -77,6 +77,18 @@
     <Compile Include="AdminProfile.Designer.cs">
       <DependentUpon>AdminProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConversationPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConversationPanel.Designer.cs">
+      <DependentUpon>ConversationPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="DecoAddPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +118,12 @@
     </Compile>
     <Compile Include="DecoRefundPanel.Designer.cs">
       <DependentUpon>DecoRefundPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
     </Compile>
     <Compile Include="ForDecoWantedPost.cs">
       <SubType>UserControl</SubType>
@@ -148,6 +166,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainConvoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainConvoPanel.Designer.cs">
+      <DependentUpon>MainConvoPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="ModernAdd.cs">
       <SubType>UserControl</SubType>
@@ -211,6 +235,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchPanel.Designer.cs">
+      <DependentUpon>SearchPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUpCatagory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -250,6 +286,12 @@
     <EmbeddedResource Include="AdminProfile.resx">
       <DependentUpon>AdminProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConversationPanel.resx">
+      <DependentUpon>ConversationPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DecoAddPanel.resx">
       <DependentUpon>DecoAddPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DecoRefundPanel.resx">
       <DependentUpon>DecoRefundPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForDecoWantedPost.resx">
       <DependentUpon>ForDecoWantedPost.cs</DependentUpon>
@@ -285,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainConvoPanel.resx">
+      <DependentUpon>MainConvoPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModernAdd.resx">
       <DependentUpon>ModernAdd.cs</DependentUpon>
@@ -326,6 +374,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchPanel.resx">
+      <DependentUpon>SearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUpCatagory.resx">
       <DependentUpon>SignUpCatagory.cs</DependentUpon>
     </EmbeddedResource>

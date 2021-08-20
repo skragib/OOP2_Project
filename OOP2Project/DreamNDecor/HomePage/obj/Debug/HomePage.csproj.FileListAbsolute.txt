@@ -38,3 +38,9 @@ C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomeP
 C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.AdminAddPanel.resources
 C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.AdminOwnerUpdate.resources
 C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.AdminDecoUpdate.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.ConversationPanel.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.Contact.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.MainConvoPanel.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.Search.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.SearchPanel.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.Feedback.resources

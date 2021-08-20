@@ -89,5 +89,29 @@ namespace HomePage
                 }
             }
         }
+        Contact c = new Contact();
+        int cf = 0;
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (Session.sName[0] != 'O')
+            {
+                MessageBox.Show("You must be logged in as House Owner to Contact from here!");
+
+            }
+            else
+            {
+                Session.s_rName = textBox4.Text;
+                if (cf == 0)
+                {
+                    this.Controls.Add(c);
+                    c.BringToFront();
+                    cf = 1;
+                }
+                else
+                {
+                    c.Show();
+                }
+            }
+        }
     }
 }
