@@ -174,6 +174,7 @@ namespace HomePage
             this.button4.TabIndex = 1;
             this.button4.Text = "View All";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label4
             // 

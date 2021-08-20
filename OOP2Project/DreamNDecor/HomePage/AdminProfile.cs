@@ -63,6 +63,20 @@ namespace HomePage
                 adu.Show();
             }
         }
-        
+        ShowFeedback sf = new ShowFeedback();
+        int sff = 0;
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (sff == 0)
+            {
+                this.Controls.Add(sf);
+                sf.BringToFront();
+                sff = 1;
+            }
+            else
+            {
+                sf.Show();
+            }
+        }
     }
 }

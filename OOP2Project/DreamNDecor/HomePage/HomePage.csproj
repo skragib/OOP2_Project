@@ -247,6 +247,12 @@
     <Compile Include="SearchPanel.Designer.cs">
       <DependentUpon>SearchPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowFeedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShowFeedback.Designer.cs">
+      <DependentUpon>ShowFeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUpCatagory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -379,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPanel.resx">
       <DependentUpon>SearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowFeedback.resx">
+      <DependentUpon>ShowFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUpCatagory.resx">
       <DependentUpon>SignUpCatagory.cs</DependentUpon>

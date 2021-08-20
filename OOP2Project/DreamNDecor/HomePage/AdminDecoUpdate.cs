@@ -333,5 +333,6 @@ namespace HomePage
             richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
             pictureBox1.Image = GetPhoto((byte[])dataGridView1.SelectedRows[0].Cells[7].Value);
         }
+
     }
 }

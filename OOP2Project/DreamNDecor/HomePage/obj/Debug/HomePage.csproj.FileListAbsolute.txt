@@ -44,3 +44,4 @@ C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomeP
 C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.Search.resources
 C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.SearchPanel.resources
 C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.Feedback.resources
+C:\Users\abidi\OneDrive\Desktop\OOP2Project\DreamNDecor\HomePage\obj\Debug\HomePage.ShowFeedback.resources

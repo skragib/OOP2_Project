@@ -23,7 +23,7 @@ namespace HomePage
         {
             string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
             SqlConnection conn = new SqlConnection(cs);
-            string query = "INSERT INTO O_LOGIN VALUES (@feedback,@uname)";
+            string query = "INSERT INTO All_Feedback VALUES (@feedback,@uname)";
 
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@feedback", richTextBox1.Text);
